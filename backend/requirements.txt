@@ -1,0 +1,43 @@
+# --- Web framework & server ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# --- Data validation / settings ---
+pydantic==2.10.4
+pydantic-settings==2.7.1
+email-validator==2.2.0
+
+# --- Auth ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.1
+
+# --- Database ---
+sqlalchemy==2.0.36
+psycopg2-binary==2.9.10       # PostgreSQL driver (used when DATABASE_URL points to Postgres)
+alembic==1.14.0                # DB migrations
+
+# --- Data processing ---
+pandas==2.2.3
+numpy==2.2.1
+openpyxl==3.1.5                # .xlsx support
+xlrd==2.0.1                    # legacy .xls support
+
+# --- Machine learning ---
+scikit-learn==1.6.0
+xgboost==2.1.3
+lightgbm==4.5.0
+prophet==1.1.6
+joblib==1.4.2
+
+# --- Caching / background jobs (optional) ---
+redis==5.2.1
+apscheduler==3.11.0             # scheduled model retraining
+
+# --- Testing ---
+pytest==8.3.4
+httpx==0.28.1
+
+# --- Utilities ---
+python-dotenv==1.0.1
