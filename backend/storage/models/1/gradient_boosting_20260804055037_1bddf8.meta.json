@@ -1,0 +1,40 @@
+{
+  "algorithm": "gradient_boosting",
+  "kind": "sklearn",
+  "feature_cols": [
+    "day_of_week",
+    "day_of_month",
+    "month",
+    "quarter",
+    "year",
+    "week_of_year",
+    "is_weekend",
+    "is_month_start",
+    "is_month_end",
+    "revenue_lag_1",
+    "revenue_lag_2",
+    "revenue_lag_3",
+    "revenue_lag_7",
+    "revenue_lag_14",
+    "revenue_lag_30",
+    "revenue_roll_mean_7",
+    "revenue_roll_std_7",
+    "revenue_roll_mean_14",
+    "revenue_roll_std_14",
+    "revenue_roll_mean_30",
+    "revenue_roll_std_30",
+    "time_index"
+  ],
+  "params": {
+    "n_estimators": 300,
+    "max_depth": 4,
+    "learning_rate": 0.01
+  },
+  "metrics": {
+    "mae": 0.0,
+    "rmse": 0.0,
+    "mape": null,
+    "r2": null
+  },
+  "trained_at": "2026-08-04T05:50:37.871243"
+}
