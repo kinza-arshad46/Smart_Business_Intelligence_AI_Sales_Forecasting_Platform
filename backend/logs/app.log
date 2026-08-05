@@ -1,0 +1,552 @@
+2026-08-03 22:16:07 | INFO     | sales_bi_platform | Database tables created/verified.
+2026-08-03 22:16:08 | INFO     | sales_bi_platform | Seeded default admin user -> email: admin@salesbi.local | password: Admin@123  (CHANGE THIS IMMEDIATELY AFTER FIRST LOGIN)
+2026-08-03 22:16:08 | INFO     | sales_bi_platform | Smart Business Intelligence & AI Sales Forecasting Platform started in 'development' mode.
+2026-08-03 22:16:16 | INFO     | sales_bi_platform | GET / -> 200 (0.0ms)
+2026-08-03 22:16:35 | INFO     | sales_bi_platform | GET / -> 200 (0.0ms)
+2026-08-03 22:16:37 | INFO     | sales_bi_platform | POST /api/v1/auth/login -> 200 (370.4ms)
+2026-08-03 22:16:39 | ERROR    | sales_bi_platform | Unhandled error on GET /api/v1/auth/me: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\anyio\streams\memory.py", line 133, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\backend\app\main.py", line 47, in log_requests
+    response = await call_next(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+
+2026-08-03 22:39:17 | INFO     | sales_bi_platform | GET / -> 200 (3.6ms)
+2026-08-03 22:39:20 | INFO     | sales_bi_platform | Database tables created/verified.
+2026-08-03 22:39:20 | INFO     | sales_bi_platform | Smart Business Intelligence & AI Sales Forecasting Platform started in 'development' mode.
+2026-08-03 22:39:22 | INFO     | sales_bi_platform | Database tables created/verified.
+2026-08-03 22:39:22 | INFO     | sales_bi_platform | Smart Business Intelligence & AI Sales Forecasting Platform started in 'development' mode.
+2026-08-03 22:39:22 | INFO     | sales_bi_platform | GET / -> 200 (0.0ms)
+2026-08-03 22:39:25 | INFO     | sales_bi_platform | POST /api/v1/auth/login -> 200 (285.1ms)
+2026-08-03 22:39:27 | ERROR    | sales_bi_platform | Unhandled error on GET /api/v1/auth/me: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\anyio\streams\memory.py", line 133, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\backend\app\main.py", line 47, in log_requests
+    response = await call_next(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+
+2026-08-03 22:42:09 | INFO     | sales_bi_platform | GET / -> 200 (3.6ms)
+2026-08-03 22:42:14 | INFO     | sales_bi_platform | GET / -> 200 (0.0ms)
+2026-08-03 22:42:17 | INFO     | sales_bi_platform | POST /api/v1/auth/login -> 200 (389.2ms)
+2026-08-03 22:42:19 | ERROR    | sales_bi_platform | Unhandled error on GET /api/v1/auth/me: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\anyio\streams\memory.py", line 133, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\backend\app\main.py", line 47, in log_requests
+    response = await call_next(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+
+2026-08-03 22:42:21 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (20.9ms)
+2026-08-03 22:42:28 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (0.0ms)
+2026-08-03 22:46:56 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (0.5ms)
+2026-08-03 22:46:58 | INFO     | sales_bi_platform | Validated upload: 1688/4385 rows kept.
+2026-08-03 22:46:59 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (532.3ms)
+2026-08-03 22:47:01 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (4.8ms)
+2026-08-03 22:47:08 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (14.9ms)
+2026-08-03 22:47:10 | INFO     | sales_bi_platform | GET /api/v1/kpi/1/dashboard -> 200 (260.7ms)
+2026-08-03 22:47:31 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (9.4ms)
+2026-08-03 22:47:32 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (13.7ms)
+2026-08-03 22:47:32 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (3.5ms)
+2026-08-03 22:47:32 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (2.5ms)
+2026-08-03 22:47:34 | INFO     | sales_bi_platform | GET /api/v1/kpi/1/dashboard -> 200 (167.1ms)
+2026-08-03 22:47:42 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (14.0ms)
+2026-08-03 22:47:44 | INFO     | sales_bi_platform | GET /api/v1/kpi/1/dashboard -> 200 (215.7ms)
+2026-08-03 22:47:51 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.5ms)
+2026-08-03 22:47:53 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/1 -> 200 (10.2ms)
+2026-08-03 22:48:00 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (2.1ms)
+2026-08-03 22:48:02 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/1 -> 200 (13.9ms)
+2026-08-03 22:48:03 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (5.5ms)
+2026-08-03 22:48:24 | INFO     | sales_bi_platform | Trained gradient_boosting: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-03 22:48:27 | INFO     | sales_bi_platform | Trained random_forest: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-03 22:48:27 | ERROR    | sales_bi_platform | Training 'xgboost' failed: 'super' object has no attribute '__sklearn_tags__'
+2026-08-03 22:49:07 | INFO     | sales_bi_platform | GET /api/v1/users/me/activity -> 200 (31.7ms)
+2026-08-03 22:49:47 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.2ms)
+2026-08-03 22:49:49 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/1 -> 200 (7.5ms)
+2026-08-03 22:50:13 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (18.3ms)
+2026-08-03 22:50:14 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (4.9ms)
+2026-08-03 22:50:20 | INFO     | sales_bi_platform | Trained gradient_boosting: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-03 22:50:34 | INFO     | sales_bi_platform | Trained random_forest: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-03 22:50:34 | ERROR    | sales_bi_platform | Training 'xgboost' failed: 'super' object has no attribute '__sklearn_tags__'
+2026-08-03 22:50:36 | INFO     | sales_bi_platform | Trained lightgbm: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-03 22:50:37 | ERROR    | sales_bi_platform | Training 'prophet' failed: 'Prophet' object has no attribute 'stan_backend'
+2026-08-03 22:50:38 | INFO     | sales_bi_platform | Best algorithm for dataset 1: gradient_boosting (MAE=0.00)
+2026-08-03 22:50:38 | INFO     | sales_bi_platform | POST /api/v1/forecast/train -> 200 (21552.0ms)
+2026-08-03 22:50:40 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/1 -> 200 (11.9ms)
+2026-08-03 22:59:15 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (5.8ms)
+2026-08-03 22:59:21 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (10.9ms)
+2026-08-03 22:59:22 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 422 (80.8ms)
+2026-08-03 22:59:24 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (8.0ms)
+2026-08-03 23:00:45 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (13.4ms)
+2026-08-03 23:00:46 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 422 (81.9ms)
+2026-08-03 23:00:48 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (3.6ms)
+2026-08-03 23:01:16 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (12.6ms)
+2026-08-03 23:01:21 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (0.0ms)
+2026-08-03 23:01:32 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (6.2ms)
+2026-08-03 23:01:34 | INFO     | sales_bi_platform | Validated upload: 1688/4385 rows kept.
+2026-08-03 23:01:34 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (468.5ms)
+2026-08-03 23:01:34 | INFO     | sales_bi_platform | Validated upload: 1688/4385 rows kept.
+2026-08-03 23:01:34 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (444.1ms)
+2026-08-03 23:01:36 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (0.0ms)
+2026-08-03 23:01:49 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (8.4ms)
+2026-08-03 23:01:51 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/5 -> 200 (2.1ms)
+2026-08-03 23:02:38 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (14.1ms)
+2026-08-03 23:02:40 | INFO     | sales_bi_platform | GET /api/v1/kpi/5/dashboard -> 200 (163.1ms)
+2026-08-03 23:02:43 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.3ms)
+2026-08-03 23:02:46 | INFO     | sales_bi_platform | GET /api/v1/kpi/5/dashboard -> 200 (264.9ms)
+2026-08-03 23:03:21 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (13.2ms)
+2026-08-03 23:03:24 | INFO     | sales_bi_platform | GET /api/v1/kpi/5/dashboard -> 200 (183.2ms)
+2026-08-03 23:03:29 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.7ms)
+2026-08-03 23:03:30 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.2ms)
+2026-08-03 23:03:32 | INFO     | sales_bi_platform | GET /api/v1/kpi/5/dashboard -> 200 (213.5ms)
+2026-08-03 23:06:06 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.1ms)
+2026-08-03 23:06:11 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.9ms)
+2026-08-03 23:06:13 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 422 (112.4ms)
+2026-08-03 23:06:15 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (14.1ms)
+2026-08-03 23:09:20 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (6.0ms)
+2026-08-03 23:09:32 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (7.6ms)
+2026-08-03 23:09:36 | INFO     | sales_bi_platform | Validated upload: 8523/8523 rows kept.
+2026-08-03 23:09:39 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (3072.3ms)
+2026-08-03 23:09:41 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.2ms)
+2026-08-03 23:09:50 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (0.0ms)
+2026-08-03 23:09:52 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/7 -> 200 (16.0ms)
+2026-08-03 23:09:56 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (3.0ms)
+2026-08-03 23:09:59 | INFO     | sales_bi_platform | POST /api/v1/forecast/train -> 400 (828.3ms)
+2026-08-03 23:10:01 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/7 -> 200 (5.5ms)
+2026-08-03 23:16:07 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (65.4ms)
+2026-08-03 23:16:21 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (0.0ms)
+2026-08-03 23:16:28 | INFO     | sales_bi_platform | Validated upload: 400000/400000 rows kept.
+2026-08-03 23:18:26 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (121669.5ms)
+2026-08-03 23:47:54 | INFO     | sales_bi_platform | Database tables created/verified.
+2026-08-03 23:47:54 | INFO     | sales_bi_platform | Smart Business Intelligence & AI Sales Forecasting Platform started in 'development' mode.
+2026-08-03 23:48:45 | INFO     | sales_bi_platform | GET / -> 200 (9.6ms)
+2026-08-03 23:49:19 | INFO     | sales_bi_platform | GET / -> 200 (2.2ms)
+2026-08-03 23:49:22 | INFO     | sales_bi_platform | POST /api/v1/auth/login -> 200 (653.4ms)
+2026-08-03 23:49:24 | ERROR    | sales_bi_platform | Unhandled error on GET /api/v1/auth/me: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\anyio\streams\memory.py", line 133, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\backend\app\main.py", line 47, in log_requests
+    response = await call_next(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+
+2026-08-03 23:49:26 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (26.5ms)
+2026-08-03 23:49:31 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (19.9ms)
+2026-08-03 23:49:49 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (229.1ms)
+2026-08-03 23:49:52 | INFO     | sales_bi_platform | GET /api/v1/kpi/8/dashboard -> 200 (23401.1ms)
+2026-08-03 23:49:55 | INFO     | sales_bi_platform | Validated upload: 400000/400000 rows kept.
+2026-08-03 23:51:39 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (107786.1ms)
+2026-08-03 23:51:41 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (17.5ms)
+2026-08-03 23:52:16 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.6ms)
+2026-08-03 23:52:18 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/9 -> 200 (16.7ms)
+2026-08-03 23:52:22 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (17.5ms)
+2026-08-03 23:52:23 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.1ms)
+2026-08-03 23:52:59 | INFO     | sales_bi_platform | Trained gradient_boosting: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-03 23:53:04 | INFO     | sales_bi_platform | Trained random_forest: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-03 23:53:04 | ERROR    | sales_bi_platform | Training 'xgboost' failed: 'super' object has no attribute '__sklearn_tags__'
+2026-08-03 23:53:10 | INFO     | sales_bi_platform | Trained lightgbm: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-03 23:53:12 | ERROR    | sales_bi_platform | Training 'prophet' failed: 'Prophet' object has no attribute 'stan_backend'
+2026-08-03 23:53:13 | INFO     | sales_bi_platform | Best algorithm for dataset 9: gradient_boosting (MAE=0.00)
+2026-08-03 23:53:13 | INFO     | sales_bi_platform | POST /api/v1/forecast/train -> 200 (47253.9ms)
+2026-08-03 23:53:15 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/9 -> 200 (9.3ms)
+2026-08-04 00:02:00 | INFO     | sales_bi_platform | GET / -> 200 (35.2ms)
+2026-08-04 00:02:09 | INFO     | sales_bi_platform | Database tables created/verified.
+2026-08-04 00:02:09 | INFO     | sales_bi_platform | Smart Business Intelligence & AI Sales Forecasting Platform started in 'development' mode.
+2026-08-04 00:02:09 | INFO     | sales_bi_platform | GET / -> 200 (5.5ms)
+2026-08-04 00:02:11 | INFO     | sales_bi_platform | POST /api/v1/auth/login -> 200 (729.7ms)
+2026-08-04 00:02:14 | ERROR    | sales_bi_platform | Unhandled error on GET /api/v1/auth/me: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\anyio\streams\memory.py", line 133, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\backend\app\main.py", line 47, in log_requests
+    response = await call_next(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+
+2026-08-04 00:02:16 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (27.7ms)
+2026-08-04 00:02:19 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (27.5ms)
+2026-08-04 00:02:27 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (1028.7ms)
+2026-08-04 00:02:52 | INFO     | sales_bi_platform | Validated upload: 400000/400000 rows kept.
+2026-08-04 00:04:36 | INFO     | sales_bi_platform | GET /api/v1/kpi/9/dashboard -> 200 (138423.9ms)
+2026-08-04 00:04:36 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (128031.7ms)
+2026-08-04 00:04:36 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (35.5ms)
+2026-08-04 00:04:44 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (14.4ms)
+2026-08-04 00:04:49 | INFO     | sales_bi_platform | Validated upload: 400000/400000 rows kept.
+2026-08-04 00:06:40 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (114975.0ms)
+2026-08-04 00:06:42 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (17.5ms)
+2026-08-04 00:16:52 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.3ms)
+2026-08-04 00:16:54 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/11 -> 200 (22.6ms)
+2026-08-04 00:16:58 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.1ms)
+2026-08-04 00:16:59 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (14.7ms)
+2026-08-04 00:17:29 | INFO     | sales_bi_platform | Trained gradient_boosting: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-04 00:17:35 | INFO     | sales_bi_platform | Trained random_forest: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-04 00:17:35 | ERROR    | sales_bi_platform | Training 'xgboost' failed: 'super' object has no attribute '__sklearn_tags__'
+2026-08-04 00:17:37 | INFO     | sales_bi_platform | Trained lightgbm: {'mae': 0.0, 'rmse': 0.0, 'mape': None, 'r2': None}
+2026-08-04 00:17:39 | ERROR    | sales_bi_platform | Training 'prophet' failed: 'Prophet' object has no attribute 'stan_backend'
+2026-08-04 00:17:39 | INFO     | sales_bi_platform | Best algorithm for dataset 11: gradient_boosting (MAE=0.00)
+2026-08-04 00:17:39 | INFO     | sales_bi_platform | POST /api/v1/forecast/train -> 200 (38020.3ms)
+2026-08-04 00:17:41 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/11 -> 200 (20.0ms)
+2026-08-04 00:18:37 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (18.0ms)
+2026-08-04 00:18:39 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/11 -> 200 (16.8ms)
+2026-08-04 00:19:05 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.9ms)
+2026-08-04 00:19:05 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (14.4ms)
+2026-08-04 00:19:08 | INFO     | sales_bi_platform | POST /api/v1/forecast/predict -> 400 (284.9ms)
+2026-08-04 00:19:10 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/11 -> 200 (21.7ms)
+2026-08-04 00:20:03 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.9ms)
+2026-08-04 00:20:03 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (17.3ms)
+2026-08-04 00:20:05 | INFO     | sales_bi_platform | POST /api/v1/forecast/predict -> 400 (246.4ms)
+2026-08-04 00:20:08 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/11 -> 200 (14.4ms)
+2026-08-04 00:39:54 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (19.2ms)
+2026-08-04 00:39:56 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/11 -> 200 (15.2ms)
+2026-08-04 00:40:20 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.1ms)
+2026-08-04 00:40:20 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.0ms)
+2026-08-04 00:40:22 | INFO     | sales_bi_platform | POST /api/v1/forecast/predict -> 400 (317.3ms)
+2026-08-04 00:40:24 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/11 -> 200 (0.5ms)
+2026-08-04 00:41:20 | INFO     | sales_bi_platform | GET /api/v1/users/me/activity -> 200 (20.7ms)
+2026-08-04 00:41:40 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.5ms)
+2026-08-04 00:41:51 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (725.1ms)
+2026-08-04 00:42:06 | INFO     | sales_bi_platform | GET /api/v1/kpi/11/dashboard -> 200 (24254.7ms)
+2026-08-04 00:42:27 | INFO     | sales_bi_platform | GET /api/v1/kpi/11/dashboard -> 200 (33293.6ms)
+2026-08-04 02:09:48 | INFO     | sales_bi_platform | GET / -> 200 (72.2ms)
+2026-08-04 02:09:57 | INFO     | sales_bi_platform | Database tables created/verified.
+2026-08-04 02:09:57 | INFO     | sales_bi_platform | Smart Business Intelligence & AI Sales Forecasting Platform started in 'development' mode.
+2026-08-04 02:09:57 | INFO     | sales_bi_platform | GET / -> 200 (15.7ms)
+2026-08-04 02:10:00 | INFO     | sales_bi_platform | POST /api/v1/auth/login -> 200 (754.4ms)
+2026-08-04 02:10:02 | ERROR    | sales_bi_platform | Unhandled error on GET /api/v1/auth/me: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\anyio\streams\memory.py", line 133, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\backend\app\main.py", line 47, in log_requests
+    response = await call_next(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+  File "C:\Users\Microsoft\Desktop\Nayi_Manzil_Internship\Smart_Business_Intelligence_AI_Sales_Forecasting_Platform\venv\lib\site-packages\fastapi\routing.py", line 176, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'value_error', 'loc': ('response', 'email'), 'msg': 'value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email.', 'input': 'admin@salesbi.local', 'ctx': {'reason': 'The part after the @-sign is a special-use or reserved name that cannot be used with email.'}}
+
+2026-08-04 02:10:04 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (14.1ms)
+2026-08-04 02:10:09 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (18.7ms)
+2026-08-04 02:10:18 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (973.1ms)
+2026-08-04 02:10:43 | INFO     | sales_bi_platform | Validated upload: 400000/400000 rows kept.
+2026-08-04 02:12:40 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (140414.3ms)
+2026-08-04 02:12:40 | INFO     | sales_bi_platform | GET /api/v1/kpi/11/dashboard -> 200 (153162.4ms)
+2026-08-04 02:12:40 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (34.8ms)
+2026-08-04 02:12:40 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (14.3ms)
+2026-08-04 02:12:46 | INFO     | sales_bi_platform | Validated upload: 400000/400000 rows kept.
+2026-08-04 02:14:36 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (114142.2ms)
+2026-08-04 02:14:38 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (12.6ms)
+2026-08-04 02:15:02 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.2ms)
+2026-08-04 02:15:04 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/13 -> 200 (20.0ms)
+2026-08-04 02:15:09 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.4ms)
+2026-08-04 02:15:12 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (13.7ms)
+2026-08-04 02:15:19 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (1111.2ms)
+2026-08-04 02:15:23 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/13 -> 200 (568.6ms)
+2026-08-04 02:15:27 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (436.6ms)
+2026-08-04 02:15:39 | INFO     | sales_bi_platform | Trained gradient_boosting: {'mae': 3458142.826601845, 'rmse': 4302822.563476306, 'mape': 7.890780901979677, 'r2': -1.59028978549542}
+2026-08-04 02:15:47 | INFO     | sales_bi_platform | Trained random_forest: {'mae': 2384014.5399892814, 'rmse': 3097400.9753261204, 'mape': 5.438929660599424, 'r2': -0.34225904687548314}
+2026-08-04 02:16:03 | INFO     | sales_bi_platform | Trained xgboost: {'mae': 2725656.3153571426, 'rmse': 3521590.4791005244, 'mape': 6.24116210012423, 'r2': -0.7350787080464527}
+2026-08-04 02:16:06 | INFO     | sales_bi_platform | Trained lightgbm: {'mae': 2291813.998134308, 'rmse': 2970490.302704034, 'mape': 5.171395128346268, 'r2': -0.23451893682787728}
+2026-08-04 02:16:07 | INFO     | sales_bi_platform | Trained gradient_boosting: {'mae': 3458142.826601845, 'rmse': 4302822.563476306, 'mape': 7.890780901979677, 'r2': -1.59028978549542}
+2026-08-04 02:16:08 | ERROR    | sales_bi_platform | Training 'prophet' failed: 'Prophet' object has no attribute 'stan_backend'
+2026-08-04 02:16:09 | INFO     | sales_bi_platform | Best algorithm for dataset 13: lightgbm (MAE=2291814.00)
+2026-08-04 02:16:09 | INFO     | sales_bi_platform | POST /api/v1/forecast/train -> 200 (57888.4ms)
+2026-08-04 02:16:10 | INFO     | sales_bi_platform | Trained random_forest: {'mae': 2384014.5399892814, 'rmse': 3097400.9753261204, 'mape': 5.438929660599424, 'r2': -0.34225904687548314}
+2026-08-04 02:16:11 | INFO     | sales_bi_platform | Trained xgboost: {'mae': 2725656.3153571426, 'rmse': 3521590.4791005244, 'mape': 6.24116210012423, 'r2': -0.7350787080464527}
+2026-08-04 02:16:11 | INFO     | sales_bi_platform | Trained lightgbm: {'mae': 2291813.998134308, 'rmse': 2970490.302704034, 'mape': 5.171395128346268, 'r2': -0.23451893682787728}
+2026-08-04 02:16:11 | ERROR    | sales_bi_platform | Training 'prophet' failed: 'Prophet' object has no attribute 'stan_backend'
+2026-08-04 02:16:11 | INFO     | sales_bi_platform | Best algorithm for dataset 13: lightgbm (MAE=2291814.00)
+2026-08-04 02:16:11 | INFO     | sales_bi_platform | POST /api/v1/forecast/train -> 200 (41722.4ms)
+2026-08-04 02:16:14 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/13 -> 200 (18.3ms)
+2026-08-04 02:17:48 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (12.7ms)
+2026-08-04 02:18:12 | INFO     | sales_bi_platform | GET /api/v1/kpi/13/dashboard -> 200 (21961.1ms)
+2026-08-04 02:18:41 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.1ms)
+2026-08-04 02:19:05 | INFO     | sales_bi_platform | GET /api/v1/kpi/13/dashboard -> 200 (21467.1ms)
+2026-08-04 02:19:15 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (13.5ms)
+2026-08-04 02:19:41 | INFO     | sales_bi_platform | GET /api/v1/kpi/13/dashboard -> 200 (23619.0ms)
+2026-08-04 02:20:23 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (19.5ms)
+2026-08-04 02:21:38 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (13.7ms)
+2026-08-04 02:21:40 | INFO     | sales_bi_platform | Validated upload: 10706/10706 rows kept.
+2026-08-04 02:21:43 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (3328.1ms)
+2026-08-04 02:21:45 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.1ms)
+2026-08-04 02:21:56 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.2ms)
+2026-08-04 02:21:58 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/14 -> 200 (2.1ms)
+2026-08-04 02:22:04 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.8ms)
+2026-08-04 02:22:07 | INFO     | sales_bi_platform | Trained gradient_boosting: {'mae': 3477.4772974429106, 'rmse': 4319.005663795683, 'mape': 77.06242962295849, 'r2': -0.14234409131016013}
+2026-08-04 02:22:09 | INFO     | sales_bi_platform | Trained random_forest: {'mae': 3334.9064609929073, 'rmse': 4090.0359422544307, 'mape': 72.00729262878033, 'r2': -0.02443319253134857}
+2026-08-04 02:22:10 | INFO     | sales_bi_platform | Trained xgboost: {'mae': 3765.749340577904, 'rmse': 4590.513538938917, 'mape': 80.578396783002, 'r2': -0.2904819598797068}
+2026-08-04 02:22:10 | INFO     | sales_bi_platform | Trained lightgbm: {'mae': 3397.62277327121, 'rmse': 4111.11978055983, 'mape': 69.57492914066393, 'r2': -0.035022172524828976}
+2026-08-04 02:22:10 | ERROR    | sales_bi_platform | Training 'prophet' failed: 'Prophet' object has no attribute 'stan_backend'
+2026-08-04 02:22:10 | INFO     | sales_bi_platform | Best algorithm for dataset 14: random_forest (MAE=3334.91)
+2026-08-04 02:22:11 | INFO     | sales_bi_platform | POST /api/v1/forecast/train -> 200 (4479.6ms)
+2026-08-04 02:22:13 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/14 -> 200 (1.7ms)
+2026-08-04 02:22:31 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.2ms)
+2026-08-04 02:22:34 | INFO     | sales_bi_platform | GET /api/v1/kpi/14/dashboard -> 200 (599.8ms)
+2026-08-04 21:17:41 | INFO     | sales_bi_platform | Database tables created/verified.
+2026-08-04 21:17:41 | INFO     | sales_bi_platform | Smart Business Intelligence & AI Sales Forecasting Platform started in 'development' mode.
+2026-08-04 21:18:43 | INFO     | sales_bi_platform | GET / -> 200 (0.0ms)
+2026-08-04 21:19:12 | INFO     | sales_bi_platform | GET / -> 200 (2.2ms)
+2026-08-04 21:19:15 | INFO     | sales_bi_platform | POST /api/v1/auth/register -> 201 (790.5ms)
+2026-08-04 21:19:43 | INFO     | sales_bi_platform | GET / -> 200 (2.1ms)
+2026-08-04 21:19:46 | INFO     | sales_bi_platform | POST /api/v1/auth/login -> 200 (698.7ms)
+2026-08-04 21:19:48 | INFO     | sales_bi_platform | GET /api/v1/auth/me -> 200 (13.6ms)
+2026-08-04 21:19:50 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (24.6ms)
+2026-08-04 21:19:55 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (13.1ms)
+2026-08-04 21:20:03 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.5ms)
+2026-08-04 21:20:04 | INFO     | sales_bi_platform | Validated upload: 10706/10706 rows kept.
+2026-08-04 21:20:08 | INFO     | sales_bi_platform | POST /api/v1/datasets/upload -> 200 (3593.5ms)
+2026-08-04 21:20:10 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (0.0ms)
+2026-08-04 21:20:19 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (13.2ms)
+2026-08-04 21:20:22 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/15 -> 200 (21.2ms)
+2026-08-04 21:20:26 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.6ms)
+2026-08-04 21:20:28 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.7ms)
+2026-08-04 21:20:46 | INFO     | sales_bi_platform | Trained gradient_boosting: {'mae': 3060.977430566272, 'rmse': 3960.5954615654655, 'mape': 56.169176773986386, 'r2': 0.03938278889479219}
+2026-08-04 21:21:07 | INFO     | sales_bi_platform | Trained random_forest: {'mae': 3228.7711236678037, 'rmse': 4006.776182811573, 'mape': 66.89404539803208, 'r2': 0.016850506809581667}
+2026-08-04 21:21:07 | ERROR    | sales_bi_platform | Training 'xgboost' failed: 'super' object has no attribute '__sklearn_tags__'
+2026-08-04 21:21:10 | INFO     | sales_bi_platform | Trained lightgbm: {'mae': 3004.3351432305335, 'rmse': 3786.175181443632, 'mape': 59.059633553787364, 'r2': 0.12212880059780507}
+2026-08-04 21:21:12 | ERROR    | sales_bi_platform | Training 'prophet' failed: 'Prophet' object has no attribute 'stan_backend'
+2026-08-04 21:21:12 | INFO     | sales_bi_platform | Best algorithm for dataset 15: lightgbm (MAE=3004.34)
+2026-08-04 21:21:12 | INFO     | sales_bi_platform | POST /api/v1/forecast/train -> 200 (42163.8ms)
+2026-08-04 21:21:14 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/15 -> 200 (16.3ms)
+2026-08-04 21:23:21 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (16.1ms)
+2026-08-04 21:23:23 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/15 -> 200 (15.7ms)
+2026-08-04 21:23:28 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.6ms)
+2026-08-04 21:23:28 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (2.3ms)
+2026-08-04 21:23:32 | INFO     | sales_bi_platform | POST /api/v1/forecast/predict -> 200 (1710.5ms)
+2026-08-04 21:23:34 | INFO     | sales_bi_platform | GET /api/v1/forecast/models/15 -> 200 (12.1ms)
+2026-08-04 21:23:51 | INFO     | sales_bi_platform | GET /api/v1/users/me/activity -> 200 (15.2ms)
+2026-08-04 21:24:09 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.7ms)
+2026-08-04 21:24:12 | INFO     | sales_bi_platform | GET /api/v1/kpi/15/dashboard -> 200 (821.1ms)
+2026-08-04 21:33:43 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (15.6ms)
+2026-08-04 21:33:46 | INFO     | sales_bi_platform | GET /api/v1/kpi/15/dashboard -> 200 (722.5ms)
+2026-08-04 21:33:56 | INFO     | sales_bi_platform | GET /api/v1/datasets -> 200 (14.6ms)
+2026-08-04 21:34:00 | INFO     | sales_bi_platform | GET /api/v1/kpi/15/dashboard -> 200 (1135.8ms)
