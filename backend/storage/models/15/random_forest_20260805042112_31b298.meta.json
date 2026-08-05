@@ -1,0 +1,40 @@
+{
+  "algorithm": "random_forest",
+  "kind": "sklearn",
+  "feature_cols": [
+    "day_of_week",
+    "day_of_month",
+    "month",
+    "quarter",
+    "year",
+    "week_of_year",
+    "is_weekend",
+    "is_month_start",
+    "is_month_end",
+    "revenue_lag_1",
+    "revenue_lag_2",
+    "revenue_lag_3",
+    "revenue_lag_7",
+    "revenue_lag_14",
+    "revenue_lag_30",
+    "revenue_roll_mean_7",
+    "revenue_roll_std_7",
+    "revenue_roll_mean_14",
+    "revenue_roll_std_14",
+    "revenue_roll_mean_30",
+    "revenue_roll_std_30",
+    "time_index"
+  ],
+  "params": {
+    "n_estimators": 100,
+    "min_samples_leaf": 2,
+    "max_depth": 5
+  },
+  "metrics": {
+    "mae": 3228.7711236678037,
+    "rmse": 4006.776182811573,
+    "mape": 66.89404539803208,
+    "r2": 0.016850506809581667
+  },
+  "trained_at": "2026-08-05T04:21:12.095721"
+}

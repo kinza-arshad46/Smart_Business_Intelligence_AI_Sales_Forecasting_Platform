@@ -1,0 +1,40 @@
+{
+  "algorithm": "lightgbm",
+  "kind": "sklearn",
+  "feature_cols": [
+    "day_of_week",
+    "day_of_month",
+    "month",
+    "quarter",
+    "year",
+    "week_of_year",
+    "is_weekend",
+    "is_month_start",
+    "is_month_end",
+    "revenue_lag_1",
+    "revenue_lag_2",
+    "revenue_lag_3",
+    "revenue_lag_7",
+    "revenue_lag_14",
+    "revenue_lag_30",
+    "revenue_roll_mean_7",
+    "revenue_roll_std_7",
+    "revenue_roll_mean_14",
+    "revenue_roll_std_14",
+    "revenue_roll_mean_30",
+    "revenue_roll_std_30",
+    "time_index"
+  ],
+  "params": {
+    "num_leaves": 15,
+    "n_estimators": 100,
+    "learning_rate": 0.01
+  },
+  "metrics": {
+    "mae": 3004.3351432305335,
+    "rmse": 3786.175181443632,
+    "mape": 59.059633553787364,
+    "r2": 0.12212880059780507
+  },
+  "trained_at": "2026-08-05T04:21:12.175246"
+}
